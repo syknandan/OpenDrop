@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OpenDrop - Secure Local WebRTC File Transfer</title>
+    <!-- Modern Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- UI Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <!-- Hidden file input for selecting files -->
+    <input type="file" id="fileInput" style="display: none;" />
+
+    <header>
+      <div class="logo">
+        <i class="ri-radar-fill"></i> OpenDrop
+      </div>
+      <div class="status">
+        <div class="status-indicator offline" id="connectionStatusIndicator"></div>
+        <span id="connectionStatusText">Connecting...</span>
+      </div>
+    </header>
+
+    <main>
+      <div class="radar-container">
+        <!-- Center profile (You) -->
+        <div class="my-profile">
+          <div class="avatar my-avatar">
+            <i class="ri-user-line"></i>
+          </div>
+          <div class="my-name-tag">
+            <span id="myName">Loading...</span>
+            <span class="label">You</span>
+          </div>
+          <!-- Radar waves -->
+          <div class="wave wave1"></div>
+          <div class="wave wave2"></div>
+        </div>
+
+        <!-- Peers will be dynamically injected here -->
+        <div id="peersContainer"></div>
+      </div>
+    </main>
+
+    <!-- Overlay UI for incoming files, progress, etc -->
+    <div id="toastContainer" class="toast-container"></div>
+
+    <div id="modalOverlay" class="modal-overlay hidden">
+      <div class="modal">
+        <h3 id="modalTitle">Incoming File</h3>
+        <div class="modal-content" id="modalContent">
+          <!-- File details injected dynamically -->
+        </div>
+        <div class="modal-actions" id="modalActions">
+          <!-- Action buttons injected dynamically -->
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
