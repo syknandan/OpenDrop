@@ -1,10 +1,18 @@
 # OpenDrop
 
-A free, secure, source-available file sharing tool. Transfer files across your local network directly from device to device using WebRTC, or upload and share via link.
+A free, secure, open-source file sharing tool. Transfer files across your local network directly from device to device using WebRTC, or upload and share via link.
 
 ## License
 
-This project is proprietary and is **not** open-source. See `LICENSE` for terms.
+This project is licensed under the Apache License 2.0. See `LICENSE`.
+
+Attribution matters:
+- If you redistribute or create derivatives, keep the license and notices.
+- Please keep the `NOTICE` file (or equivalent visible attribution) with your distribution.
+
+Community request (not a legal requirement):
+- If you reuse OpenDrop, please mention the original project and author.
+- If possible, inform the author by opening an issue/discussion in this repository.
 
 ## How to Use
 
